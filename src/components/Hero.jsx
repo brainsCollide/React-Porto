@@ -49,7 +49,7 @@ function Hero() {
                         className='group text-center w-fit px-6 py-3 mt-5 my-2 rounded-md flex items-center justify-center flex-row 
                         bg-gradient-to-r from-cyan-950 to-slate-400 cursor-pointer'
                         >
-                            Portofolio
+                            See my CV Here
                             <span className='group-hover:rotate-90 duration-300'>
                                 <MdOutlineArrowForwardIos size={15} className='ml-1' />
                             </span>
