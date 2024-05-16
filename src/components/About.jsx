@@ -4,15 +4,15 @@ function About() {
             name="about"
             className="w-full h-screen bg-gradient-to-b from-gray-950 to-black text-white"
         >
-            <div className="max-w-screen-lg p-4  mx-auto flex flex-col justify-center w-full h-full">
-                <div className="pt-10">
-                <p className="text-4xl pb-2 font-medium border-b-4 inline border-gray-500">
+            <div className="max-w-screen-lg p-4 pt-40 mx-auto flex flex-col justify-center w-full h-full">
+                <div>
+                <p className="text-4xl font-medium border-b-4 inline border-gray-500">
                     About
                 </p>
 
                 </div>
 
-                <p className="md:text-xl pt-20 font-thin sm:text-sm ">
+                <p className="md:text-xl pt-10 font-thin sm:text-sm ">
                     A dedicated Computer Engineering student skilled in web development, with expertise in HTML, CSS,
                     JavaScript, React, Node.js, and MongoDB. Demonstrated in developing responsive web applications and
                     solving complex problems. Aspiring to become a Full Stack Web Developer, seeking challenging roles to

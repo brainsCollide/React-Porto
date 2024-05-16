@@ -20,12 +20,12 @@ function Hero() {
          to-gray-950'
         >
             <div className=' relative max-w-screen-lg pb-30  mx-auto flex-col items-center
-             justify-center h-full px-4 z-10'>
+             justify-center h-full px-4 pt-32'>
                 <div className='flex flex-col justify-center h-full'>
-                <div className='text-center py-20 relative z-10'>
+                <div className='text-center py-20 relative'>
                         <img src={person} 
                         alt="avatar"
-                        className='mx-auto w-64 border border-gray-300 rounded-full bg-blue-200 animate-float'
+                        className='mx-auto w-64 border  border-gray-300 rounded-full bg-blue-200 animate-float'
                         />
                         <h3 className='text-white text-md font-medium mt-5 animate-float'>Hello there!</h3>
                     </div> 
@@ -35,10 +35,12 @@ function Hero() {
                         >
                             I'm a Full Stack Web Developer
                         </h2>
-                        <p className='md:text-lg sm:text-md  text-white font-light py-4 '>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Necessitatibus natus modi quam fuga voluptas pariatur sint, veritatis magnam? 
-                            Cupiditate, perspiciatis! Expedita nesciunt molestias fugit placeat cupiditate 
-                            maiores. Perferendis, perspiciatis nisi.
+                        <p className='md:text-lg sm:text-md  text-white font-light py-4 text-justify'
+                        >
+                            With a solid foundation in HTML, CSS, JavaScript, React, Node.js, and MongoDB, I'm dedicated to mastering full-stack development.
+                            My aim is to build web applications that go beyond just meeting user expectations—they should delight and impress.
+                            I'm always eager to take on new challenges and bring fresh, innovative ideas to the table.
+                            Let's embark on this journey together!
                         </p>
                     </div>
                     <div className=' flex flex-col justify-center items-center '>
