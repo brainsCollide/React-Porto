@@ -59,13 +59,12 @@ function Navbar() {
 
                 {nav && (
 
-                    <ul className="flex flex-col justify-center items-center
-                        absolute top-0 left-0 w-full h-screen bg-gradient-to-br from-white to-black text-white z-20"
+                    <ul className="flex flex-col justify-center items-center text-xl absolute top-0 left-0 w-full
+                    transition-all ease-in duration-500 h-screen bg-gradient-to-br from-gray-950 to-blue-950 z-20"
                          >
                          {links.map(({id, link}) => (
                              <li key={id} 
-                                className="px-4 cursor-pointer capitalize py-6
-                                text-4xl"
+                                className="px-4 cursor-pointer capitalize py-6 hover:bg-cyan-500 duration-200 rounded-lg"
                             >
                                 <Link onClick={() => setNav(!nav)}
                                 to={link}
