@@ -29,7 +29,7 @@ function Navbar() {
 
     return(
         <div className="bg-gradient-to-b from-gray-950
-        to-blue-950">
+        to-blue-950 fixed w-full">
             <div className="flex justify-between items-center h-24 text-white mx-10">
                 <div>
                     <h1 className="w-full text-3xl font-bold text-[#00df9a]"
