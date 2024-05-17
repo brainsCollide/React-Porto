@@ -21,10 +21,10 @@ function Navbar() {
             id: 3,
             link: 'experience'
         },
-        // {
-        //     id: 4,
-        //     link: 'contacts'
-        // },
+        {
+            id: 4,
+            link: 'contacts'
+        },
     ];
 
     return(
@@ -59,8 +59,8 @@ function Navbar() {
 
                 {nav && (
 
-                    <ul className="flex flex-col justify-center items-center text-xl absolute top-0 left-0 w-full
-                    transition-all ease-in duration-500 h-screen bg-gradient-to-br from-gray-950 to-blue-950 z-20"
+                    <ul className="flex flex-col justify-center items-center text-xl absolute top-0 w-full
+                    h-screen bg-gradient-to-br from-gray-950 to-blue-950 z-20"
                          >
                          {links.map(({id, link}) => (
                              <li key={id} 

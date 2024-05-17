@@ -30,7 +30,7 @@ function Hero() {
                         <h3 className='text-white text-md font-medium mt-5 animate-float'>Hello there!</h3>
                     </div> 
                     <div className='text-center'>
-                        <h2 className='text-white text-shadow-lg w-auto shadow-yellow-400 text-4xl sm:text-7xl
+                        <h2 className='text-white text-shadow-lg w-auto shadow-[#00df9a] text-4xl sm:text-7xl
                         font-bold font-signature mb-4 capitalize'
                         >
                             I'm a Full Stack Web Developer
@@ -46,8 +46,8 @@ function Hero() {
                     <div className=' flex flex-col justify-center items-center '>
                         <button 
                         onClick={handleDownload}
-                        className='group text-center w-fit px-6 py-3 mt-5 my-2 rounded-md flex items-center justify-center flex-row 
-                        bg-gradient-to-r from-cyan-950 to-slate-400 cursor-pointer'
+                        className='group text-center w-fit px-6 py-3 mt-5 my-2 font-medium rounded-md flex items-center justify-center flex-row 
+                        ring ring-transparent hover:ring-[#00df9a] duration-700 bg-gradient-to-r from-cyan-950 to-slate-400 cursor-pointer'
                         >
                             See my CV Here
                             <span className='group-hover:rotate-90 duration-300'>
