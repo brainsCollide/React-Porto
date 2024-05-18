@@ -36,9 +36,9 @@ function Navbar() {
                     {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
                 </div>
 
-                <ul className={`flex flex-col justify-center text-2xl font-thin absolute top-0 ml-32 items-end pr-24 w-72 h-screen bg-gradient-to-br from-gray-950 to-blue-950 z-20 transition-all duration-300 ease-in-out ${nav ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+                <ul className={`flex flex-col justify-center text-2xl font-thin absolute top-0 w-full items-end pr-24 h-screen bg-gradient-to-br from-gray-950 to-blue-950 z-20 transition-all duration-300 ease-in-out ${nav ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
                     {links.map(({ id, link }) => (
-                        <li key={id} className="pl-10 cursor-pointer capitalize py-6 hover:bg-[#00df9a] duration-200 rounded-lg">
+                        <li key={id} className="px-4 cursor-pointer capitalize py-6 hover:bg-[#00df9a] duration-200 rounded-lg">
                             <Link onClick={() => setNav(!nav)} to={link} smooth duration={500}>{link}</Link>
                         </li>
                     ))}
