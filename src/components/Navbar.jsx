@@ -42,7 +42,7 @@ function Navbar() {
                     {links.map(({id, link}) => (
                         <li key={id} 
                         className="px-4 cursor-pointer text-white capitalize font-medium text-xl
-                        text-grey-500 hover:scale-105 hover:bg-cyan-500 duration-200"
+                        text-grey-500 hover:scale-105 hover:bg-[#00df9a] rounded-full duration-200"
                         >
                            <Link to={link} smooth duration={500}> {link} </Link>
                         </li>
@@ -51,8 +51,8 @@ function Navbar() {
 
                 <div
                  onClick={() => setNav(!nav)}
-                 className="cursor-pointer pr-4 z-30 text-gray-500
-                 md:hidden"
+                 className={`cursor-pointer pr-4 z-30 text-gray-500
+                 md:hidden ${!nav ? 'text-gray' : 'text-red-800'} duration-500 relative`}
                  >
                     {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
                 </div>
@@ -64,7 +64,7 @@ function Navbar() {
                          >
                          {links.map(({id, link}) => (
                              <li key={id} 
-                                className="px-4 cursor-pointer capitalize py-6 hover:bg-cyan-500 duration-200 rounded-lg"
+                                className="px-4 cursor-pointer capitalize py-6 hover:bg-[#00df9a] duration-200 rounded-lg"
                             >
                                 <Link onClick={() => setNav(!nav)}
                                 to={link}

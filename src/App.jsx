@@ -5,6 +5,8 @@ import About from './components/About'
 import Navbar from './components/Navbar'
 import Experience from './components/Experience'
 import Contacts from './components/Contacts'
+import Projects from './components/Projects'
+
 
 function App() {
 
