@@ -19,13 +19,13 @@ function Hero() {
         className='h-screen w-full bg-gradient-to-b from-blue-950
          to-gray-950'
         >
-            <div className=' relative max-w-screen-lg pb-30  mx-auto flex-col items-center
-             justify-center h-full px-4 pt-32'>
+            <div className=' relative max-w-screen-lg mx-auto flex-col items-center
+             justify-center h-full px-4 pt-48'>
                 <div className='flex flex-col justify-center h-full'>
                 <div className='text-center py-20 relative'>
                         <img src={person} 
                         alt="avatar"
-                        className='mx-auto w-64 border  border-gray-300 rounded-full bg-blue-200 animate-float'
+                        className='mx-auto w-64 border border-gray-300 rounded-full bg-blue-200 animate-float'
                         />
                         <h3 className='text-white text-md font-medium mt-5 animate-float'>Hello there!</h3>
                     </div> 

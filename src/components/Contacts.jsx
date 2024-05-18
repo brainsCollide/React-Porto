@@ -24,11 +24,10 @@ function Contacts() {
     return(
         <div
         name='contacts'
-        className='bg-gradient-to-b from-black to-gray-950
-        w-full h-screen'
+        className='bg-gradient-to-b from-black to-gray-950 w-full h-full'
         >
-            <div className='max-w-screen-lg mx-auto p-4 flex flex-col
-            justify-center w-full h-full text-white'>
+            <div className='max-w-screen-lg mx-auto flex flex-col
+            justify-center w-full py-20 text-white'>
                 <div>
                     <p className='text-4xl pb-2 font-medium border-b-4 inline border-gray-500'>Contacts</p>
                 </div>
@@ -44,7 +43,7 @@ function Contacts() {
                     <a key={id} href={link} className='group'>
                     <div>
                         <img src={src} className='w-12 mx-auto border rounded-full bg-white transition-transform ease-in-out duration-300 group-hover:scale-110'/>
-                        <p className='py-4 transition-transform ease-in-out duration-300 group-hover:-translate-y-1 group-hover:scale-110'>{title}</p>
+                        <p className='py-4 transition-transform ease-in-out duration-300 group-hover:-translate-y-1 group-hover:scale-110 hover:text-[#00df9a] '>{title}</p>
                     </div>
                     </a>
                 ))}
