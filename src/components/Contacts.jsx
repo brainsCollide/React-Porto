@@ -27,7 +27,7 @@ function Contacts() {
         className='bg-gradient-to-b from-black to-black w-full h-full'
         >
             <div className='max-w-screen-lg mx-auto flex flex-col
-            justify-center w-full py-20 pl-4 text-white'>
+            justify-center w-full pt-32 px-4 text-white'>
                 <div>
                     <p className='text-4xl pb-2 font-medium border-b-4 inline border-gray-500'>Contacts</p>
                 </div>

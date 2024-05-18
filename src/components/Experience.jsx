@@ -59,10 +59,10 @@ function Experience() {
     return(
         <div 
         name='experience'
-        className='bg-gradient-to-b from-black from-25% via-gray-950 to-black w-full py-20'
+        className='bg-gradient-to-b from-black from-25% via-gray-950 to-black w-full'
         >
-            <div className='max-w-screen-lg mx-auto p-4 flex flex-col
-            justify-center w-full h-full text-white'>
+            <div className='max-w-screen-lg mx-auto p-4 pt-32 flex flex-col
+            justify-center w-full text-white'>
                 <div>
                     <p className='text-4xl  font-medium border-b-4
                     border-gray-500 pb-2 inline'>

@@ -16,11 +16,11 @@ function Hero() {
     return(
         <div
         name='home'
-        className='h-screen w-full bg-gradient-to-b from-blue-950
+        className='h-fullw-full bg-gradient-to-b from-blue-950
          to-gray-950'
         >
             <div className=' relative max-w-screen-lg mx-auto flex-col items-center
-             justify-center h-full px-4 pt-48'>
+             justify-center h-full px-4 pt-20'>
                 <div className='flex flex-col justify-center h-full'>
                 <div className='text-center py-20 relative'>
                         <img src={person} 
