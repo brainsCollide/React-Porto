@@ -6,6 +6,7 @@ import Navbar from './components/Navbar'
 import Experience from './components/Experience'
 import Contacts from './components/Contacts'
 import { ThemeProvider } from './API/contextAPI'
+import Projects from './components/Projects'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
               <Hero />
               <About />
               <Experience/>
+              <Projects />
               <Contacts />
           </div>
       </ThemeProvider>

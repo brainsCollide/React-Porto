@@ -21,7 +21,9 @@ function Footer() {
     ];
 
     return (
-        <footer className={`w-full py-8 ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-800'}`}>
+        <footer 
+        name='contacts'
+        className={`w-full py-8 ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-800'}`}>
             <div className="max-w-screen-lg mx-auto flex flex-col items-center">
                 <p className="text-2xl font-medium mb-4">Let's Connect!</p>
                 <div className="flex space-x-8">
