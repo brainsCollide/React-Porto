@@ -1,57 +1,55 @@
-import linked from '../assets/linkedin.svg'
-import github from '../assets/github.svg'
+import linked from '../assets/linkedin.svg';
+import github from '../assets/github.svg';
+import { useTheme } from '../API/contextAPI';
 
-
-
-function Contacts() {
+function Footer() {
+    const { theme } = useTheme();
 
     const social = [
         {
-            id:1,
-            src:github,
-            title:'GitHub',
-            link:'https://github.com/brainsCollide'
-
+            id: 1,
+            src: github,
+            title: 'GitHub',
+            link: 'https://github.com/brainsCollide',
         },
         {
-            id:2,
-            src:linked,
-            title:'LinkedIn',
-            link:'https://www.linkedin.com/in/fauzan-asyraf/'
+            id: 2,
+            src: linked,
+            title: 'LinkedIn',
+            link: 'https://www.linkedin.com/in/fauzan-asyraf/',
         },
-    ]
+    ];
 
-    return(
-        <div
-        name='contacts'
-        className='bg-gradient-to-b from-black to-black w-full h-full'
-        >
-            <div className='max-w-screen-lg mx-auto flex flex-col
-            justify-center w-full pt-32 px-4 text-white'>
-                <div>
-                    <p className='text-4xl pb-2 font-medium border-b-4 inline border-gray-500'>Contacts</p>
+    return (
+        <footer className={`w-full py-8 ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-800'}`}>
+            <div className="max-w-screen-lg mx-auto flex flex-col items-center">
+                <p className="text-2xl font-medium mb-4">Let's Connect!</p>
+                <div className="flex space-x-8">
+                    {social.map(({ id, src, link, title }) => (
+                        <a
+                            key={id}
+                            href={link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex flex-col items-center"
+                        >
+                            <img
+                                src={src}
+                                alt={title}
+                                className={`w-10 h-10 border rounded-full transition-transform ease-in-out duration-300 group-hover:scale-110 ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-300'}`}
+                            />
+                            <p className={`mt-2 text-sm transition-colors duration-300 group-hover:text-[#00df9a] ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
+                                {title}
+                            </p>
+                        </a>
+                    ))}
                 </div>
-
-                <div>
-                    <p className='py-8 text-base '>
-                        Let's connect!
-                    </p>
-                </div>
-
-                <div className='w-full grid grid-cols-2 text-center py-8 px-12'>
-                {social.map(({ id, src, link, title }) => (
-                    <a key={id} href={link} className='group'>
-                    <div>
-                        <img src={src} className='w-12 mx-auto border rounded-full bg-white transition-transform ease-in-out duration-300 group-hover:scale-110'/>
-                        <p className='py-4 transition-transform ease-in-out duration-300 group-hover:-translate-y-1 group-hover:scale-110 hover:text-[#00df9a] '>{title}</p>
-                    </div>
-                    </a>
-                ))}
-                </div>
-
+                <p className={`mt-6 text-sm ${theme === 'dark' ? 'text-gray-500' : 'text-gray-500'}`}>
+                    © 2024 Fauzan Asyraf. All rights reserved.
+                </p>
             </div>
-        </div>
-    )
+        </footer>
+    );
 }
 
-export default Contacts;
+export default Footer;

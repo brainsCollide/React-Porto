@@ -5,22 +5,21 @@ import About from './components/About'
 import Navbar from './components/Navbar'
 import Experience from './components/Experience'
 import Contacts from './components/Contacts'
-import Projects from './components/Projects'
-import Example from './components/Example'
+import { ThemeProvider } from './API/contextAPI'
 
 function App() {
-
   return (
-    <> 
-      <div>
-        <Navbar/>
-        <Hero/>
-        <About/>
-        <Experience/>
-        <Contacts/>
-      </div>
-    </>
-  )
+      <ThemeProvider>
+          <div>
+              <Navbar />
+              <Hero />
+              <About />
+              <Experience/>
+              <Contacts />
+          </div>
+      </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
+
