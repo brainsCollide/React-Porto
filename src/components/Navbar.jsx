@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 import { useTheme } from "../API/contextAPI";
@@ -31,7 +31,7 @@ function Navbar() {
 
                 {/* Theme Toggle Button */}
                 <button onClick={toggleTheme} className="ml-4 p-2 border rounded-full">
-                    {theme === 'light' ? <MdDarkMode/> : <MdLightMode />}
+                    {theme === 'light' ? <MdDarkMode /> : <MdLightMode />}
                 </button>
 
                 {/* Mobile Menu Icon */}
@@ -39,8 +39,22 @@ function Navbar() {
                     {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
                 </div>
 
-                {/* Mobile Menu */}
-                <ul className={`flex flex-col absolute top-0 right-0 w-3/4 h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-white'} text-2xl font-thin transition-all duration-300 ease-in-out ${nav ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+                {/* Background Overlay */}
+                {nav && (
+                    <div
+                        onClick={() => setNav(false)}
+                        className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md z-20 md:hidden"
+                    ></div>
+                )}
+
+                {/* Mobile Menu with Slide-In Animation */}
+                <ul
+                    className={`flex flex-col absolute top-0 right-0 w-2/4 h-screen ${
+                        theme === 'dark' ? 'bg-gray-900' : 'bg-white'
+                    } py-16 text-2xl font-thin transform ${
+                        nav ? 'translate-x-0' : 'translate-x-full'
+                    } transition-transform duration-300 ease-in-out z-30`}
+                >
                     {links.map(({ id, link }) => (
                         <li key={id} className="py-6 px-10 cursor-pointer capitalize" onClick={() => setNav(!nav)}>
                             <Link to={link} smooth duration={500}>{link}</Link>
