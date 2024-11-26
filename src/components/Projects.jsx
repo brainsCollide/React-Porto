@@ -1,4 +1,5 @@
 import project1 from '../assets/projects/project1.png';
+import project2 from '../assets/projects/project2.png';
 import { useTheme } from '../API/contextAPI';
 
 function Projects() {
@@ -16,12 +17,14 @@ function Projects() {
         },
         {
             id: 2,
-            title: 'Project Two',
-            description: 'An e-commerce site with product filtering and checkout.',
-            techStack: ['Next.js', 'Tailwind CSS', 'Stripe API'],
-            demoLink: 'https://example.com/project-two',
-            repoLink: 'https://github.com/username/project-two',
-        },
+            title: "PT. Mulia Solusindo Website",
+            description: "A corporate website showcasing company information, products, services, clients, and contact details with a modern UI.",
+            techStack: ["React", "Tailwind CSS", "Headless UI", "Vite"],
+            image: project2,
+            demoLink: "https://ms-web-five.vercel.app",
+            repoLink: "https://github.com/brainsCollide/Mulia-web"
+        }
+        
         // Add more projects as needed
     ];
 
