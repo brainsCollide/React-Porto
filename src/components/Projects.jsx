@@ -8,16 +8,25 @@ function Projects() {
     const projects = [
         {
             id: 1,
-            title: 'Finance App',
-            description: 'A web app for managing and tracking financial tasks efficiently.',
-            techStack: ['React', 'Node.js', 'MongoDB'],
-            image: project1,
-            demoLink: 'https://example.com/project-one',
-            repoLink: 'https://github.com/brainsCollide/Dashboard',
-        },
+            title: 'Finance Tracker App',
+            description: 'A sleek web application designed for efficient financial tracking, expense management, and insightful analytics.',
+            techStack: ['React', 'Node.js', 'MongoDB', 'TailwindCSS'],
+            image: project1, // Ensure this is correctly imported in your component
+            demoLink: 'https://example.com/finance-tracker', // Update with actual working link
+            repoLink: 'https://github.com/brainsCollide/Finance-Tracker', // Ensure repo name is relevant
+        },        
         {
             id: 2,
             title: "PT. Mulia Solusindo Website",
+            description: "A corporate website showcasing company information, products, services, clients, and contact details with a modern UI.",
+            techStack: ["React", "Tailwind CSS", "Headless UI", "Vite"],
+            image: project2,
+            demoLink: "https://ms-web-five.vercel.app",
+            repoLink: "https://github.com/brainsCollide/Mulia-web"
+        },
+        {
+            id: 3,
+            title: "CodeNext",
             description: "A corporate website showcasing company information, products, services, clients, and contact details with a modern UI.",
             techStack: ["React", "Tailwind CSS", "Headless UI", "Vite"],
             image: project2,

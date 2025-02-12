@@ -1,6 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const plugin = require('tailwindcss/plugin');
-
 export default {
   content: [
     "./index.html",
@@ -10,7 +8,7 @@ export default {
     extend: {
       fontFamily: {
         signature: ["Radio Canada Big"],
-        subHeading: ["Roboto"]
+        subHeading: ["Roboto"],
       },
       textShadow: {
         sm: '0 1px 2px var(--tw-shadow-color)',
@@ -19,16 +17,4 @@ export default {
       },
     },
   },
-  plugins: [
-    plugin(function ({ matchUtilities, theme }) {
-      matchUtilities(
-        {
-          'text-shadow': (value) => ({
-            textShadow: value,
-          }),
-        },
-        { values: theme('textShadow') }
-      );
-    }),
-  ],
 };

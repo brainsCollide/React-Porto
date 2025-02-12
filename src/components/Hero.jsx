@@ -1,12 +1,13 @@
 import person from '../assets/person.png';
 import { useTheme } from '../API/contextAPI';
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import { SiLinkedin, SiGithub } from 'react-icons/si';
 
 function Hero() {
     const { theme } = useTheme(); // Access the current theme
 
     const handleDownload = () => {
-        const fileUrl = 'https://drive.google.com/uc?export=download&id=1_q3uFD9KWxF-IQ-pEt-HdFNR8X7E8mJr';
+        const fileUrl = 'https://drive.google.com/uc?export=download&id=1HjywmkwMWMu1aPf2ThOjqhJYIoWIUKbX';
         const link = document.createElement('a');
         link.href = fileUrl;
         link.download = 'cv.pdf';
@@ -21,8 +22,8 @@ function Hero() {
             className={`h-full w-full ${theme === 'dark' ? 'bg-gradient-to-b from-blue-950 to-gray-950' : 'bg-gradient-to-b from-blue-200 to-gray-100'}`}
         >
             <div className='relative max-w-screen-lg mx-auto flex-col items-center justify-center h-full px-4 pt-20'>
-                <div className='flex flex-col justify-center h-full'>
-                    <div className='text-center py-20 relative'>
+                <div className='flex flex-col justify-center pt-20'>
+                    <div className='text-center relative'>
                         <img 
                             src={person} 
                             alt="avatar"
@@ -32,29 +33,40 @@ function Hero() {
                             Hello there! I am Fauzan
                         </h3>
                     </div> 
-                    <div className='text-center'>
-                        <h2 className={`text-shadow-lg w-auto shadow-[#00df9a] text-4xl sm:text-7xl font-bold font-signature mb-4 capitalize ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>
-                            I'm a Full Stack Web Developer
+                    <div className='text-center py-8'>
+                        <h2 className={`text-shadow-lg w-auto shadow-[#00df9a] text-4xl sm:text-7xl font-bold font-signature py-8 capitalize ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>
+                            Full Stack <span className='text-[#00df9a]'> Web Developer </span> 
                         </h2>
-                        <p className={`md:text-lg sm:text-md font-light py-4 text-justify ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>
-                            With a solid foundation in HTML, CSS, JavaScript, React, Node.js, and MongoDB, I'm dedicated to mastering full-stack development.
-                            My aim is to build web applications that go beyond just meeting user expectations—they should delight and impress.
-                            I'm always eager to take on new challenges and bring fresh, innovative ideas to the table.
-                            Let's embark on this journey together!
+                        <p className={`md:text-lg sm:text-md font-light text-center ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>
+                            I specialize in creating robust, scalable web applications with tehcnologies like React, Node.js, and MongoDB. Let's collaborate to turn your ideas into stunning digital experiences.
                         </p>
                     </div>
-                    <div className='flex flex-col justify-center items-center'>
+                    <div className='flex flex-row gap-4 justify-center items-center font-thin'>
                         <button 
                             onClick={handleDownload}
-                            className={`group text-center w-fit px-6 py-3 mt-5 my-2 font-medium rounded-md flex items-center justify-center flex-row ring ring-transparent hover:ring-[#00df9a] duration-700 cursor-pointer ${
-                                theme === 'dark' ? 'bg-gradient-to-r from-cyan-950 to-slate-400 text-white' : 'bg-gradient-to-r from-cyan-200 to-slate-200 text-gray-800'
+                            className={`group text-center w-fit px-6 py-3 mt-5 my-2 rounded-md flex items-center justify-center flex-row ring-2 ring-transparent hover:ring-[#00df9a] duration-700 cursor-pointer ${
+                                theme === 'dark' ? 'bg-gradient-to-r from-cyan-950 to-slate-700 text-white' : 'bg-gradient-to-r from-cyan-200 to-slate-200 text-gray-800'
                             }`}
                         >
-                            See my CV Here
+                            Your Next Hire? Download My Resume
                             <span className='group-hover:rotate-90 duration-300'>
                                 <MdOutlineArrowForwardIos size={15} className='ml-1' />
                             </span>
                         </button>
+                        <button 
+                            className={`group text-center w-fit px-6 py-3 mt-5 my-2 rounded-md flex items-center justify-center flex-row ring-2 ring-transparent hover:ring-[#00df9a] duration-700 cursor-pointer ${
+                                theme === 'dark' ? ' text-white' : 'text-gray-800'
+                            }`}
+                        >
+                            Contact Me
+                            <span className='group-hover:rotate-90 duration-300'>
+                                <MdOutlineArrowForwardIos size={15} className='ml-1' />
+                            </span>
+                        </button>
+                    </div>
+                    <div className='flex flex-row gap-x-6 justify-center py-10 items-center' >
+                        <SiGithub size={26} className={`${theme === 'dark' ? 'text-white hover:text-[#00df9a]' : 'text-black hover:text-[#00df9a]'} cursor-pointer`} />
+                        <SiLinkedin size={26} className={`${theme === 'dark' ? 'text-white hover:text-[#00df9a]' : 'text-black hover:text-[#00df9a]'} cursor-pointer`} />   
                     </div>
                 </div>
             </div>

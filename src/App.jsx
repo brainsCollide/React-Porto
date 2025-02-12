@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import './App.css'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -7,6 +7,7 @@ import Experience from './components/Experience'
 import Contacts from './components/Contacts'
 import { ThemeProvider } from './API/contextAPI'
 import Projects from './components/Projects'
+
 
 function App() {
   return (
