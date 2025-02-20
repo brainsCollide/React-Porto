@@ -53,7 +53,8 @@ function Hero() {
                                 <MdOutlineArrowForwardIos size={15} className='ml-1' />
                             </span>
                         </button>
-                        <button 
+                        <a
+                            href='mailto:fauzanasyraf.syah@gmail.com'
                             className={`group text-center w-fit px-6 py-3 mt-5 my-2 rounded-md flex items-center justify-center flex-row ring-2 ring-transparent hover:ring-[#00df9a] duration-700 cursor-pointer ${
                                 theme === 'dark' ? ' text-white' : 'text-gray-800'
                             }`}
@@ -62,11 +63,17 @@ function Hero() {
                             <span className='group-hover:rotate-90 duration-300'>
                                 <MdOutlineArrowForwardIos size={15} className='ml-1' />
                             </span>
-                        </button>
+                        </a>
                     </div>
                     <div className='flex flex-row gap-x-6 justify-center py-10 items-center' >
-                        <SiGithub size={26} className={`${theme === 'dark' ? 'text-white hover:text-[#00df9a]' : 'text-black hover:text-[#00df9a]'} cursor-pointer`} />
-                        <SiLinkedin size={26} className={`${theme === 'dark' ? 'text-white hover:text-[#00df9a]' : 'text-black hover:text-[#00df9a]'} cursor-pointer`} />   
+                        <a
+                            href='https://github.com/brainsCollide'>
+                            <SiGithub size={26} className={`${theme === 'dark' ? 'text-white hover:text-[#00df9a]' : 'text-black hover:text-[#00df9a]'} cursor-pointer`} />
+                        </a>
+                        <a
+                            href='https://www.linkedin.com/in/fauzan-asyraf/'>
+                            <SiLinkedin size={26} className={`${theme === 'dark' ? 'text-white hover:text-[#00df9a]' : 'text-black hover:text-[#00df9a]'} cursor-pointer`} />   
+                        </a>
                     </div>
                 </div>
             </div>

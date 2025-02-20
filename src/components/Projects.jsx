@@ -1,5 +1,6 @@
 import project1 from '../assets/projects/project1.png';
 import project2 from '../assets/projects/project2.png';
+import project3 from '../assets/projects/project3.png';
 import { useTheme } from '../API/contextAPI';
 
 function Projects() {
@@ -11,13 +12,13 @@ function Projects() {
             title: 'Finance Tracker App',
             description: 'A sleek web application designed for efficient financial tracking, expense management, and insightful analytics.',
             techStack: ['React', 'Node.js', 'MongoDB', 'TailwindCSS'],
-            image: project1, // Ensure this is correctly imported in your component
-            demoLink: 'https://example.com/finance-tracker', // Update with actual working link
-            repoLink: 'https://github.com/brainsCollide/Finance-Tracker', // Ensure repo name is relevant
+            image: project1,
+            demoLink: 'https://dashboard-tracker33.vercel.app', 
+            repoLink: 'https://github.com/brainsCollide/Dashboard', 
         },        
         {
             id: 2,
-            title: "PT. Mulia Solusindo Website",
+            title: "Company Profile",
             description: "A corporate website showcasing company information, products, services, clients, and contact details with a modern UI.",
             techStack: ["React", "Tailwind CSS", "Headless UI", "Vite"],
             image: project2,
@@ -27,10 +28,10 @@ function Projects() {
         {
             id: 3,
             title: "CodeNext",
-            description: "A corporate website showcasing company information, products, services, clients, and contact details with a modern UI.",
-            techStack: ["React", "Tailwind CSS", "Headless UI", "Vite"],
-            image: project2,
-            demoLink: "https://ms-web-five.vercel.app",
+            description: "A service platform for requesting website development and digital solutions with a seamless experience and modern UI.",
+            techStack: ["React", "Tailwind CSS"],
+            image: project3,
+            demoLink: "https://web-service-beryl.vercel.app",
             repoLink: "https://github.com/brainsCollide/Mulia-web"
         }
         
@@ -42,11 +43,13 @@ function Projects() {
             name="projects"
             className={`w-full py-16 ${theme === 'dark' ? 'bg-gradient-to-b from-gray-950 to-blue-950 text-white' : 'bg-gradient-to-b from-gray-100 to-blue-100 text-gray-800'}`}
         >
-            <div className="max-w-screen-lg mx-auto px-4">
-                <h2 className="text-4xl font-medium border-b-4 border-gray-500 inline-block mb-8">Projects</h2>
-                <p className="text-base font-thin mb-8">
-                    Here are some of the projects I’ve worked on recently.
-                </p>
+            <div className="max-w-screen-lg mx-auto just px-4 ">
+                <div className='py-10 text-center'>
+                    <h2 className="text-4xl font-semibold mb-8">Projects</h2>
+                    <p className="text-xl font-thin mb-8">
+                        Here are some of the projects I’ve worked on.
+                    </p>
+                </div>
 
                 <div className="grid gap-8 sm:grid-cols-2">
                     {projects.map(({ id, title, description, techStack, image, demoLink, repoLink }) => (
