@@ -33,11 +33,6 @@ function About() {
                         </p>
 
                         <p className={`${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>
-                            Recently, I've honed my skills in <span className="font-semibold text-[#00ADB5]">React</span> and <span className="font-semibold text-[#00ADB5]">Tailwind CSS</span>, 
-                            crafting interactive UI and embracing utility-first design. I focus on clean code and performance optimization.
-                        </p>
-
-                        <p className={`${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>
                             During my internship, I deployed apps with <span className="font-semibold text-[#00ADB5]">Next.js</span>, managed SEO, and worked with <span className="font-semibold text-[#00ADB5]">Cypress </span> 
                             and <span className="font-semibold text-[#00ADB5]">Cucumber</span> for BDD. I’m now exploring microservices with <span className="font-semibold text-[#00ADB5]">Node.js</span> and <span className="font-semibold text-[#00ADB5]">Docker</span>.
                         </p>

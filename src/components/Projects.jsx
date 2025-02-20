@@ -13,7 +13,7 @@ function Projects() {
             description: 'A sleek web application designed for efficient financial tracking, expense management, and insightful analytics.',
             techStack: ['React', 'Node.js', 'MongoDB', 'TailwindCSS'],
             image: project1,
-            demoLink: 'https://dashboard-tracker33.vercel.app', 
+            demoLink: 'https://finance-tracker-nine-rosy.vercel.app/', 
             repoLink: 'https://github.com/brainsCollide/Dashboard', 
         },        
         {
@@ -31,8 +31,8 @@ function Projects() {
             description: "A service platform for requesting website development and digital solutions with a seamless experience and modern UI.",
             techStack: ["React", "Tailwind CSS"],
             image: project3,
-            demoLink: "https://web-service-beryl.vercel.app",
-            repoLink: "https://github.com/brainsCollide/Mulia-web"
+            demoLink: "https://web-service-beryl.vercel.app/",
+            repoLink: "https://github.com/brainsCollide/Web-Service"
         }
         
         // Add more projects as needed
