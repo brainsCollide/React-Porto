@@ -4,6 +4,7 @@ import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { SiLinkedin, SiGithub } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import { FaReact, FaNodeJs } from 'react-icons/fa'; 
+import GradientText from './particles/GradientText';
 
 function Hero() {
     const { theme } = useTheme(); // Access the current theme
@@ -55,7 +56,7 @@ function Hero() {
                         transition={{
                             repeat: Infinity,
                             repeatType: "reverse",
-                            duration: 10 + Math.random() * 20,
+                            duration: 1 + Math.random() * 10,
                             ease: "easeInOut",
                         }}
                     />
@@ -125,15 +126,13 @@ function Hero() {
                         </motion.h3>
                     </div> 
                     <div className='text-center py-8'>
-                        <motion.h2 
-                            className={`tw-auto text-4xl sm:text-7xl font-bold font-signature py-8 capitalize ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}
-                            initial={{ opacity: 0, y: -50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: false }}
-                            transition={{ duration: 0.8, delay: 0.3 }}
-                        >
-                            Full Stack <span className='text-[#00df9a]'> Developer </span> 
-                        </motion.h2>
+                        <h1>
+                            <GradientText
+                                className={`tw-auto text-4xl sm:text-7xl font-bold font-signature py-8 capitalize ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}
+                            >
+                                Full Stack Developer
+                            </GradientText>
+                        </h1>
                         <motion.p 
                             className={`md:text-lg sm:text-md font-light text-center ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}
                             initial={{ opacity: 0, x: -100 }}

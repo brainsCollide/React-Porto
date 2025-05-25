@@ -17,7 +17,7 @@ function Navbar() {
     ];
 
     return (
-<div className={`w-full fixed z-10 ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
+<div className={`w-full fixed z-10 bg-transparent ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
     <div className="flex justify-between items-center h-24 mx-10">
         {/* Logo */}
         <h1 className="text-2xl font-bold text-[#00df9a]">Oz.DEV</h1>
@@ -25,7 +25,7 @@ function Navbar() {
         {/* Desktop Navigation Links */}
         <ul className="hidden md:flex">
             {links.map(({ id, link }) => (
-                <li key={id} className="px-4 cursor-pointer capitalize font-medium text-xl hover:scale-105 rounded-full duration-200">
+                <li key={id} className="px-4 cursor-pointer capitalize font-medium text-lg hover:scale-105 rounded-full duration-200">
                     <Link to={link} smooth duration={500}>{link}</Link>
                 </li>
             ))}
@@ -41,7 +41,7 @@ function Navbar() {
             {/* Theme Toggle Button */}
             <button 
                 onClick={toggleTheme} 
-                className="p-2 border rounded-full hover:bg-gray-200"
+                className={`p-2 border rounded-full ${theme === 'dark' ? 'hover:bg-slate-900' : 'hover:bg-white'} transition-colors duration-200`}
             >
                 {theme === 'light' ? <MdDarkMode size={24} /> : <MdLightMode size={24} />}
             </button>
