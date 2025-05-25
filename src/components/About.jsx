@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useTheme } from "../API/contextAPI";
 import person from "../assets/person.png";
 import { motion } from 'framer-motion';
@@ -38,7 +39,7 @@ function About() {
                 </div>
 
                 {/* Main Content */}
-                <div className="flex flex-col md:flex-row items-center gap-12">
+                <div className="flex flex-col md:flex-row items-center gap-20">
                     {/* Text Section */}
                     <motion.div
                         className="md:w-2/3 space-y-8"
@@ -99,7 +100,7 @@ function About() {
                         <div className="p-2 bg-white dark:bg-gray-800 rounded-full shadow-2xl">
                             <motion.img
                                 src={person}
-                                alt="Muhammad Fauzan"
+                                alt="Portrait of Muhammad Fauzan, Full Stack Developer"
                                 className="rounded-full w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 object-cover shadow-md"
                                 whileHover={{
                                     scale: 1.05,

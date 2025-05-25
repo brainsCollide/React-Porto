@@ -115,32 +115,21 @@ function Hero() {
                                 <FaNodeJs />
                             </motion.div>
                         </div>
-                        <motion.h3 
-                            className={`mt-5 ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}
-                            initial={{ opacity: 0, y: 25 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: false }}
-                            transition={{ duration: 0.7, delay: 0.2 }}
-                        >
-                            Hello there! I am Fauzan
-                        </motion.h3>
                     </div> 
                     <div className='text-center py-8'>
-                        <h1>
-                            <GradientText
-                                className={`tw-auto text-4xl sm:text-7xl font-bold font-signature py-8 capitalize ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}
-                            >
-                                Full Stack Developer
-                            </GradientText>
+                        <h1 className={`text-3xl sm:text-6xl font-bold text-center py-6 font-signature ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>
+                        <GradientText>
+                            Full Stack Developer
+                        </GradientText>
                         </h1>
-                        <motion.p 
-                            className={`md:text-lg sm:text-md font-light text-center ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}
-                            initial={{ opacity: 0, x: -100 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: false }}
-                            transition={{ duration: 0.8, delay: 0.4 }}
+
+                        <motion.p
+                        className={`text-lg sm:text-xl text-center font-light ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}
+                        initial={{ opacity: 0, y: 25 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
                         >
-                            I specialize in creating robust, scalable web applications with technologies like React, Node.js, and MongoDB. Let's collaborate to turn your ideas into stunning digital experiences.
+                        Hello there! I am Fauzan — I build fast, modern full-stack apps with React, Node.js, and MongoDB.
                         </motion.p>
                     </div>
                     <motion.div 
