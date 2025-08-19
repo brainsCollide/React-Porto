@@ -20,7 +20,7 @@ function Navbar() {
 <div className={`w-full fixed z-10 bg-transparent ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
     <div className="flex justify-between items-center h-24 mx-10">
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-[#00df9a]">Oz.DEV</h1>
+        <h1 className="text-2xl font-bold text-[#109eea]">ASYDEV</h1>
 
         {/* Desktop Navigation Links */}
         <ul className="hidden md:flex">

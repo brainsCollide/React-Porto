@@ -7,7 +7,7 @@ import Experience from './components/Experience'
 import Contacts from './components/Contacts'
 import { ThemeProvider } from './API/contextAPI'
 import Projects from './components/Projects'
-import { BrowserRouter } from "react-router-dom";
+
 
 
 function App() {
@@ -16,9 +16,9 @@ function App() {
           <div>
               <Navbar />
               <Hero />
-              <About />
-              <Experience/>
               <Projects />
+              <Experience/>
+              <About />
               <Contacts />
           </div>
       </ThemeProvider>

@@ -3,7 +3,7 @@ import { useTheme } from '../API/contextAPI';
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { SiLinkedin, SiGithub } from 'react-icons/si';
 import { motion } from 'framer-motion';
-import { FaReact, FaNodeJs } from 'react-icons/fa'; 
+import { FaReact, FaNodeJs, FaDocker } from 'react-icons/fa'; 
 import GradientText from './particles/GradientText';
 
 function Hero() {
@@ -65,7 +65,12 @@ function Hero() {
 
             <div className='relative max-w-screen-lg mx-auto flex-col items-center justify-center h-full px-4 pt-20'>
                 <div className='flex flex-col justify-center pt-20'>
-                    <div className='text-center relative'>
+                    <motion.div 
+                        className='text-center relative'
+                        initial={{ opacity: 0, y: -50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                    >
                         <motion.img 
                             src={person} 
                             alt="avatar"
@@ -114,8 +119,22 @@ function Hero() {
                             >
                                 <FaNodeJs />
                             </motion.div>
+                            <motion.div
+                                className="absolute bottom-5 left-80 text-2xl text-[#2629df]" // Docker icon
+                                transition={{ duration: 0.5, delay: 0.4 }}
+                                animate={{
+                                    y: [0, -5, 0],
+                                    transition: {
+                                         duration: 3,
+                                         repeat: Infinity,
+                                         ease: "easeInOut"
+                                    }  
+                                 }}
+                            >
+                                <FaDocker />
+                            </motion.div>
                         </div>
-                    </div> 
+                    </motion.div> 
                     <div className='text-center py-8'>
                         <h1 className={`text-3xl sm:text-6xl font-bold text-center py-6 font-signature ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>
                         <GradientText>
@@ -168,28 +187,7 @@ function Hero() {
                             </span>
                         </motion.a>
                     </motion.div>
-                    <motion.div 
-                        className='flex flex-row gap-x-6 justify-center py-10 items-center'
-                        initial={{ opacity: 0, y: 25 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: false }}
-                        transition={{ duration: 0.8, delay: 0.6 }}
-                    >
-                        <motion.a
-                            href='https://github.com/brainsCollide'
-                            whileHover={{ scale: 1.2, color: "#00df9a" }}
-                            transition={{ duration: 0.2 }}
-                        >
-                            <SiGithub size={26} className={`${theme === 'dark' ? 'text-white' : 'text-black'} cursor-pointer`} />
-                        </motion.a>
-                        <motion.a
-                            href='https://www.linkedin.com/in/fauzan-asyraf/'
-                            whileHover={{ scale: 1.2, color: "#00df9a" }}
-                            transition={{ duration: 0.2 }}
-                        >
-                            <SiLinkedin size={26} className={`${theme === 'dark' ? 'text-white' : 'text-black'} cursor-pointer`} />   
-                        </motion.a>
-                    </motion.div>
+                    
                 </div>
             </div>
         </motion.div>
